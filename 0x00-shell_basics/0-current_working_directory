@@ -1,0 +1,3 @@
+#!/bin/bash
+#This is a scrip to print the absolute path of a current working directory
+pwd
