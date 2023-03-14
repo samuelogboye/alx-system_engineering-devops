@@ -1,0 +1,2 @@
+#!/bin/bash
+ls [:alpha:]* /etc/ssh/sshd_config
