@@ -1,2 +1,2 @@
 #!/bin/bash
-hex=$(printf "%X\n" $DECIMAL)
+echo "ibase=10; obase=16; $DECIMAL" | bc
