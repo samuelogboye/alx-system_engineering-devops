@@ -1,0 +1,1 @@
+A directory to show all the scripts relating to 0x03-shell_variables_expansions
