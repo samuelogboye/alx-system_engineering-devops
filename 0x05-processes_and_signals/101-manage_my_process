@@ -9,12 +9,12 @@ case $1 in
 	;;
     'stop')
 	pkill -f manage_my_process &
-	sudo rm -rf /var/run/my_process.pid &
+	rm -f /var/run/my_process.pid &
 	echo "manage_my_process stopped"
 	;;
     'restart')
 	pkill -f manage_my_process &
-        sudo rm -f /var/run/my_process.pid &
+        rm -f /var/run/my_process.pid &
 	./manage_my_process &
         echo "$$" > /var/run/my_process.pid &
         echo "manage_my_process restarted"
