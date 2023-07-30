@@ -14,7 +14,6 @@ case $1 in
 	;;
     'restart')
 	pkill -f manage_my_process &
-	wait
         sudo rm -f /var/run/my_process.pid &
 	./manage_my_process &
         echo "$$" > /var/run/my_process.pid &
