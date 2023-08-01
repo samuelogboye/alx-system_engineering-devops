@@ -6,7 +6,7 @@
  * infinite_while - creates an infinite loop to make the program hang
  * Return: always 0
  */
-in infinit_while(void)
+int infinite_while(void)
 {
 	while (1)
 	{
@@ -22,7 +22,7 @@ in infinit_while(void)
 int main(void)
 {
 	int i;
-	pid_t zombi;
+	pid_t zombie;
 
 	for (i = 0; i < 5; i++)
 	{
