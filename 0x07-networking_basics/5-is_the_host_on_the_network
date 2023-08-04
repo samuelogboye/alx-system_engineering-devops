@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # A bash script that pings an IP address passed as an argument
 # It should trow usage error if argument has no IP address
+# ping the IP 5 times
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
-    ping "$1"
+    ping -c 5 "$1"
 fi
