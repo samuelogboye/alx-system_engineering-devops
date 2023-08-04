@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # A bash script that pings an IP address passed as an argument
+# It should trow usage error if argument has no IP address
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ]; then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
     ping "$1"
