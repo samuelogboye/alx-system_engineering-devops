@@ -1,1 +1,23 @@
 https://imgur.com/A9YqlUA
+
+
+
+Here are some specific details concerning this infrastructure:
+
+    To enhance performance and reliability, we are introducing two new servers. This addition will distribute the workload across multiple machines and offer backup capabilities in case of hardware issues.
+
+    The load balancer, HAproxy, is set up with a round-robin distribution algorithm. This algorithm evenly allocates incoming requests across all operational servers.
+
+    The load balancer implements an Active-Passive configuration. This entails one server being actively engaged in processing incoming requests, while the other remains passive, ready to take over if the active server malfunctions.
+
+    The database follows a Primary-Replica (Master-Slave) cluster model. This consists of a primary node managing write requests and several replica nodes handling read requests. Changes made on the primary node are instantly replicated to the replica nodes.
+
+    Write requests are directed to the primary node, while read requests should be directed to any of the replica nodes.
+
+However, there exist certain issues within this infrastructure:
+
+    A single point of failure remains unresolved, which is the load balancer. If the load balancer experiences a malfunction, the entire system becomes inaccessible.
+
+    Security concerns are evident, given the absence of a firewall and HTTPS encryption.
+
+    Lack of real-time monitoring means that the system lacks the ability to promptly identify and address emerging problems.
