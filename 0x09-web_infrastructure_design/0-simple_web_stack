@@ -1,1 +1,15 @@
 https://imgur.com/OrHxPph
+
+
+
+Here are specific details and issues related to the infrastructure:
+
+    Servers, functioning as computers, deliver services to other computers via a network.
+    Domain names serve to identify websites and enhance user recollection of website addresses.
+    The www record, a CNAME record, directs to the domain name.
+    Nginx, the web server, acts as a reverse proxy, transferring requests to the application server.
+    The application server houses the code base and manages requests from the web server.
+    The database stores application data and awaits requests from the application server on a designated port.
+    The server employs the HTTP protocol for communication with users' computers.
+    A single point of failure (SPOF) exists in the infrastructure, meaning a system-wide halt if any component malfunctions. Additionally, maintenance tasks like code deployment or web server restarts necessitate downtime.
+    The infrastructure lacks scalability in the face of heavy incoming traffic.
