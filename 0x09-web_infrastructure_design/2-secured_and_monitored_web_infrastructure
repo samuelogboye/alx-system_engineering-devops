@@ -1,1 +1,25 @@
 https://imgur.com/lzlSPGw
+
+
+
+
+
+Here are specific details about this infrastructure:
+
+    Firewalls are implemented to safeguard servers from unauthorized access and malicious attacks. They filter and block harmful traffic that could potentially jeopardize server security.
+
+    HTTPS is utilized to encrypt communication between the server and the client. This ensures data transmitted remains secure and inaccessible to third-party interception.
+
+    Monitoring is employed to oversee server performance and promptly detect arising issues. Its purpose is to guarantee seamless server operation and prevent performance-affecting problems.
+
+    Monitoring tools gather data by tracking various metrics such as CPU, memory, disk usage, and network activity. This data is then analyzed to identify potential issues.
+
+    For monitoring web server QPS (Queries Per Second), tools like Apache JMeter or Gatling can be employed. These tools simulate user traffic, allowing measurement of server response time and QPS.
+
+However, several issues are associated with this infrastructure:
+
+    Terminating SSL at the load balancer level presents a concern as it exposes unencrypted traffic between the load balancer and web servers. This could pose a security risk in the presence of malicious actors on the network.
+
+    Relying on a single MySQL server capable of accepting writes introduces a single point of failure. If this server becomes unavailable, the entire website goes down.
+
+    The presence of servers with identical components (database, web server, and application server) can lead to issues. A failure in any one component would result in the entire website becoming inaccessible.
