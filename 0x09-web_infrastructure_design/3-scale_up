@@ -1,1 +1,28 @@
 https://imgur.com/LayPn96
+
+
+Here are the rationales for introducing each additional element into this infrastructure:
+
+    Load Balancer (HAproxy):
+        Reason: Implemented for effective load distribution across multiple Application Servers.
+        Benefit: Enhances system efficiency, prevents server overload, and mitigates the risk of downtime.
+
+    Dedicated Application Servers:
+        Reason: Established to isolate application logic, thus improving performance and resource management.
+        Benefit: Yields heightened stability and responsiveness of the application.
+
+    Component Separation:
+        Reason: Introduced for augmented security and simplified maintenance by segmenting components.
+        Benefit: Diminishes the attack surface and enables targeted updates and troubleshooting.
+
+    Application Files Replication:
+        Reason: Implemented to ensure redundancy and availability in the event of server failures.
+        Benefit: Reduces downtime by permitting alternative servers to handle application services.
+
+    Shared Database (MySQL):
+        Reason: Adopted for centralized data storage and uniformity across both Application Servers.
+        Benefit: Averts data inconsistencies and guarantees uniform access.
+
+    Load Balancer Cluster:
+        Reason: Created to achieve high availability via a clustered load balancer setup.
+        Benefit: Ensures uninterrupted services even in the face of load balancer failures.
