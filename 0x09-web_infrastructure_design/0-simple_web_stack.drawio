@@ -1,11 +1,26 @@
-<mxfile host="app.diagrams.net" modified="2023-08-28T03:31:50.867Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="9agWiW53jsrx3tA_tbw7" version="21.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-28T03:33:35.156Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="PvLMhM_ci-a2Xkfziog1" version="21.6.9" type="github">
   <diagram name="Page-1" id="suhhvkQ06J53lEMtTsHB">
     <mxGraphModel dx="1364" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="lHEWTX2Y4w5UeIPoX3LG-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="20" y="290" width="130" height="130" as="geometry" />
+          <mxGeometry x="10" y="460" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lHEWTX2Y4w5UeIPoX3LG-2" value="CLIENT/BROWSER" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="47.5" y="500" width="55" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lHEWTX2Y4w5UeIPoX3LG-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="lHEWTX2Y4w5UeIPoX3LG-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="420" as="sourcePoint" />
+            <mxPoint x="70" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lHEWTX2Y4w5UeIPoX3LG-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lHEWTX2Y4w5UeIPoX3LG-5" value="DNS" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="32.5" y="90" width="85" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
