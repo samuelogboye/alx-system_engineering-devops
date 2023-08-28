@@ -1,11 +1,11 @@
-0x09. Web infrastructure design
-DevOps
-SysAdmin
-web infrastructure
+# 0x09. Web infrastructure design
+## DevOps
+## SysAdmin
+## web infrastructure
 
-DNS
-Monitoring
-Web Server
-Network basics
-Load balancer
-Server
+- DNS
+- Monitoring
+- Web Server
+- Network basics
+- Load balancer
+- Server
