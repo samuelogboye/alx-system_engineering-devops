@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# bash scrip to install and configure HAproxy on a server
+
+# Install HAproxy
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+
+# Configuration
+FILEPATH=/etc/haproxy/haproxy.cfg
+
+# Frontend Configuration
+FRONT="
+frontend samuel_web_frontend
+    bind *:80
+    mode http
+    default_backend samuel_web_backend"
+
+echo "$FRONT" | sudo tee -a "$FILEPATH"
+
+# Backend Configuration
+CONFIG="
+backend samuel_web_backend
+    balance roundrobin
+    server 335959-web-01 3.84.168.238:80 check
+    server 335959-web-02 54.197.75.194:80 check"
+
+echo "$CONFIG" | sudo tee -a "$FILEPATH"
+
+# Enabling haproxy to run on by default
+echo "ENDABLE=1" | sudo tee /etc/default/haproxy
+
+sudo service haproxy restart    
