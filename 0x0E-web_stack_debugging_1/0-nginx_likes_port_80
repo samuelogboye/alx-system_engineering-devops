@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Installs Nginx with the following configurations:
+# fixed: Listens on port 80.
+cd /etc/nginx/sites-enabled || exit;
+
+# delete the default file
+rm default;
+
+# create symbolic link to the default file in sites-available
+ln -s /etc/nginx/sites-available/default default;
+
+# restart nginx
+service nginx restart;
