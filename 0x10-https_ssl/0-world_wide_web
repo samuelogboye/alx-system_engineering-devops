@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A script that display information about subdomains
+
+# Funtion
+subdomain_details() {
+    script=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
+    echo "$2 $script" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+}
+
+# Condition
+if [ $# == 1 ]; then
+    subdomain_details "$1" "www"
+    subdomain_details "$1" "lb-01"
+    subdomain_details "$1" "web-01"
+    subdomain_details "$1" "web-02"
+
+elif [ $# == 2 ]; then 
+    
+    subdomain_details "$1" "$2"
+fi
