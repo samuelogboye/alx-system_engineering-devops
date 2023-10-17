@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# A Program that install UFW Firwall and configure it
+# to block all incoming and outgoing traffic on all ports
+# except for port 22, 80 and 443
+
+sudo apt-get update
+sudo apt-get install ufw
+
+# Configuring Firewall to deny all incoming Traffic and allow outgoing
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Configuring Firewall to allow on the following ports
+sudo ufw allow 80/tcp
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+
+# Checking the status of Firewall Rules
+sudo ufw status
+
+# Redirecting all Traffic from port :8080 to :80
+sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
