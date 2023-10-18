@@ -36,7 +36,7 @@ log-error	= /var/log/mysql/error.log
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 server-id = 2 # Unique ID for the replica server
-relay-log = /var/log/mysql/mysql-relay.log
-log-error = /var/log/mysql/mysql.err
-read-only = 1
-replicate-do-db = tyrell_corp
+relay-log = /var/log/mysql/mysql-relay-bin.log
+log_bin         = /var/log/mysql/mysql-bin.log
+binlog_do_db    = tyrell_corp
+
