@@ -20,7 +20,6 @@ if __name__ == "__main__":
         data = json.loads(response.read().decode())
         tasks = data
 
-
     with open('{}.json'.format(employeeId), mode='w') as file:
         json.dump(
             {
