@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     with urllib.request.urlopen(url) as response:
         data = json.loads(response.read().decode())
-        employeeName = data.get('name')
+        employeeName = data.get('username')
 
     todoUrl = url + "/todos"
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         tasks = data
 
 
-    with open('{}.json'.format(employeeId), mode='w', newline='') as file:
+    with open('{}.json'.format(employeeId), mode='w') as file:
         json.dump(
             {
                 employeeId: [
