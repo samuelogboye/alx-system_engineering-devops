@@ -30,9 +30,12 @@ if __name__ == "__main__":
         with open('{}.json'.format(employeeId), mode='w', newline='') as file:
             json.dump(
                 {
-                    'EmployeeName': employeeName,
-                    'TotalTasks': len(tasks),
-                    'CompletedTasks': done,
-                    'Tasks': done_tasks
+                    employeeId: [
+                        {
+                            "task": task.get('title'),
+                            "completed": task.get('completed'),
+                            "username": employeeName
+                        } for task in tasks
+                    ]
                 },
                 file)
