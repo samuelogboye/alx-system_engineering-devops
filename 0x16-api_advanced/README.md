@@ -26,9 +26,9 @@ You can run each of the tasks using the provided main scripts, such as 0-main.py
 
 To execute the main scripts, use the following format:
 
-bash
-
+```bash
 python3 <main_script.py> <subreddit> <additional_arguments>
+```
 
     <subreddit>: Replace this with the name of the subreddit you want to query.
 
