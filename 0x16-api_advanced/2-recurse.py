@@ -7,9 +7,9 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=None):
-        """ A recursive function that returns a list containing the titles of all
-                hot articles for a given subreddit.
-                """
+        """ A recursive function that returns a list containing
+        the titles of all hot articles for a given subreddit.
+        """
         url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
         headers = {'User-Agent': 'My User Agent 1.0'}
         params = {
@@ -24,5 +24,6 @@ def recurse(subreddit, hot_list=[], after=None):
         if after is None:
                 return hot_list
         else:
-                hot_list += [c.get("data").get("title") for c in results.get("children")]
+                hot_list += [c.get("data").get("title")
+                             for c in results.get("children")]
                 return recurse(subreddit, hot_list, after)
